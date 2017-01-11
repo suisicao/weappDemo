@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<title>绑定手机号码</title>
+	<link rel="stylesheet" href="../css/style.css" />
+	<script src="../js/jquery-1.7.2.min.js"></script>
+	<script src="../js/main.js"></script>
+	<script src="../3th-part/jquery.md5.js"></script>
+	<script src="../js/getToken.js"></script>
+	<script src="/js/ajax-extension.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="/js/wechat.js"></script>
+</head>
+
+<body class="bgwhite">
+	<div class="container">
+		<div class="phone-login">
+			<div class="inputLogin1">
+				<input type="text" id="phone" name="" placeholder="请输入手机号">
+			</div>
+			<div class="phonevalid w100 clear">
+				<div class="inputLogin2">
+					<input type="password" id="verifyCode" name="" placeholder="请输入验证码">
+				</div>
+				<div class="inputLogin3" id="btn">
+					<button type="button">发送验证码</button>
+				</div>
+			</div>
+		</div>
+		<div class="bluebtn">登录</div>
+	</div>
+	<script type="text/javascript">
+		var token = window.youge.Utils.getToken();
+		var userKey = null;
+		window.youge.Utils.getUserKey(true, function(getUserKey) {
+			userKey = getUserKey;
+			if (userKey) {
+				init();
+			}
+		});
+
+		function init() {
+
+			$('.bluebtn').on('click', function() {
+				$.ajax({
+					type: 'post',
+					url: window.youge.Utils.host + "member/bindPhone",
+					data: {
+						accessToken: token,
+						userKey: userKey,
+						phone: $('#phone').val(),
+						verifyCode: $('#verifyCode').val()
+					},
+					success: function(result) {
+						if (result.status == 0) {
+							window.location.href = "bindsuccess.html";
+						} else {
+							if (result.status == -403) {
+								alert("账号或者密码错误");
+							}
+							if (result.status == -402) {
+								alert("账号不存在");
+							}
+							if (result.status == -405) {
+								alert("验证码错误");
+							}
+
+							if (result.status == -404) {
+								alert("您的手机号码已经被其他用户绑定");
+							}
+						}
+					}
+				})
+			})
+		}
+
+		function sendVerify() {
+			$.ajax({
+				type: 'post',
+				url: window.youge.Utils.host + "member/sendVerifyCode",
+				data: {
+					accessToken: token,
+					phone: $('#phone').val()
+				},
+				success: function() {}
+			})
+		}
+		var countdown = 60;
+		$("#btn").click(function settime() {
+			if (countdown == 0) {
+				$("#btn").removeClass('disabled');
+				$("#btn").html("发送验证码");
+				countdown = 60;
+				return;
+			} else {
+				if (countdown == 60) {
+					sendVerify()
+				}
+				//$("#btn").addClass('disabled');
+				$("#btn").html('<button type="button" class="disabled">重新发送(' + countdown + ')</button>');
+				countdown--;
+			}
+			setTimeout(function() {
+				settime()
+			}, 1000)
+		});
+		$(".login-ways .account").click(function() {
+			$(this).addClass('active');
+			$(".login-ways .phone").removeClass('active');
+			$(".account-login").removeClass('none');
+			$(".phone-login").addClass('none');
+		});
+		$(".login-ways .phone").click(function() {
+			$(this).addClass('active');
+			$(".login-ways .account").removeClass('active');
+			$(".phone-login").removeClass('none');
+			$(".account-login").addClass('none');
+		});
+	</script>
+</body>
+
+</html>
