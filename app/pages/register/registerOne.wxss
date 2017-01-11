@@ -1,0 +1,4 @@
+/* pages/register/registerOne.wxss */
+.registerOne text{
+    font-size: 32rpx;
+}
