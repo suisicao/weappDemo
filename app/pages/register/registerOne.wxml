@@ -1,3 +1,23 @@
 <view class="registerOne">
-    <text>1.输入手机号>2.输入验证码>3.设置密码</text>
+    <view class="tophints">
+        <text class="hint">1.输入手机号 ></text>
+        <text class="hint">2.输入验证码 ></text>
+        <text class="hint">3.设置密码</text>
+    </view>
+    
+    <input type="number" class="Reginput " maxlength="11" />
+     <image src="{{src}}" class="Clearinput " mode="widthFix"></image>
+  
+     <button class="regOnebtn"> 发送验证码</button>
+
+     <view class="regone-container clear ">
+        <text class="one">请输入验证码</text>
+        <view class="two">
+            <input type="number" id="imgVariCode" name="imgVariCode"/>
+            <image src="{{variimg}}" class="img" mode="widthFix" ></image>
+            <text class="changeVari">换一张</text>
+        </view>
+        <text class="three">确定</text> 
+     </view>
+
 </view>

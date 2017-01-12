@@ -1,3 +1,11 @@
 page {
     background-color: #f5f5f5;
+    margin: 0;
+    padding:0;
+}
+.clear{
+    overflow: hidden;
+}
+.none{
+    display: none;
 }

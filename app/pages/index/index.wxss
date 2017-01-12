@@ -42,7 +42,7 @@
     background-color: #2277da;
     color: white;
     line-height: 85rpx;
-    margin:50px auto;
+    margin:50rpx auto;
 }
 .page-bottom {
     background-color: #fff;

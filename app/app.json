@@ -1,7 +1,8 @@
 {
     "pages": [
-        "pages/index/index",
-        "pages/register/registerOne"
+         "pages/register/registerOne",
+        "pages/index/index"
+       
     ],
 
     "window": {
