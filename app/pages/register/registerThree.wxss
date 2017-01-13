@@ -1,0 +1,32 @@
+/* pages/register/registerThree.wxss */
+.regThreebtn_auth{
+    margin-top: 1rem;
+}
+.Reg3input{
+    margin-top:0rem;
+    height: 2.80rem;     
+    background: #fff;
+    font-size: 36rpx;
+    color: #333333;
+    border: 0 none;
+    padding-left: 6%;
+    width: 100%;
+    float: left;  
+    border-bottom: 1px solid #e8e8e8;
+}
+.regThreetitle{
+    line-height: 2.8rem;
+}
+.regThreehint{
+    font-size: 0.8rem;
+    margin-top: 0.2rem;
+    float: left;
+    color: #bfbfbf;
+    width: 92%;
+    margin-left: 3%;
+    padding: 15rpx;
+}
+.regThreebtn_confirm,.regThreebtn_auth{
+    float: left;
+    margin-top: 0.8rem;
+}

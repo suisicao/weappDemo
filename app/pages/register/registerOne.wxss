@@ -1,4 +1,4 @@
-/* pages/register/registerOne.wxss */
+/* pages/register/registerOne.wxss
 .registerOne .tophints{
         margin-top: 10rpx;
         height: 100rpx;
@@ -11,6 +11,9 @@
     line-height: 5rem;
     height: 5rem;
     text-align: right;
+}
+.registerOne .tophints .active{
+    color:  #ed3e4f;
 }
 .registerOne  .Reginput{     
     margin-top: 1rem; 
@@ -105,3 +108,4 @@
     background-position: 5rem 0.5rem;
 
 }
+ */
