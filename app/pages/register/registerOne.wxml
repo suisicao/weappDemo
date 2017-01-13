@@ -1,6 +1,6 @@
 <view class="registerOne">
     <view class="tophints">
-        <text class="hint">1.输入手机号 ></text>
+        <text class="hint active">1.输入手机号 ></text>
         <text class="hint">2.输入验证码 ></text>
         <text class="hint">3.设置密码</text>
     </view>
@@ -10,7 +10,7 @@
   
      <button class="regOnebtn"> 发送验证码</button>
 
-     <view class="regone-container clear ">
+     <view class="regone-container clear none ">
         <text class="one">请输入验证码</text>
         <view class="two">
             <input type="number" id="imgVariCode" name="imgVariCode"/>

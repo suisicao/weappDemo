@@ -1,0 +1,14 @@
+<view class="registerOne">
+    <view class="tophints">
+        <text class="hint ">1.输入手机号 ></text>
+        <text class="hint active">2.输入验证码 ></text>
+        <text class="hint">3.设置密码</text>
+    </view>
+    
+    <input type="number" class="Reg2input " maxlength="6" />
+    <button class="regTwo_countbtn">重新获取(60)</button>
+  
+     <button class="regTwobtn  btngrey_act"> 提交验证码</button>
+
+
+</view>

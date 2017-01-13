@@ -1,0 +1,20 @@
+<view class="registerOne">
+    <view class="tophints">
+        <text class="hint ">1.输入手机号 ></text>
+        <text class="hint">2.输入验证码 ></text>
+        <text class="hint active">3.设置密码</text>
+    </view>
+    
+    <view>
+    <text class="Reg3input regThreetitle ">开联通账户</text>
+    <input type="number" class="Reg3input regThreepswd" maxlength="6" />
+    </view>
+  
+    <text class="regThreehint">注：登录密码由6-16个字符，需使用字母、数字或符号组合，不能使用纯数字、纯字母、纯符号</text>
+    
+    
+     <button class="regThreebtn_confirm btnblue">确定</button>
+     <button class="regThreebtn_auth  btngrey_act">继续进行实名认证</button>
+
+  
+</view>
