@@ -1,0 +1,11 @@
+/* pages/portal/myAccount.wxss */
+.topMess{
+    background-image: url("../../images/myacc-head.jpg");
+    background-size: 100%;
+
+}
+.topMess .userPhoto{
+    width: 3.5rem;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
