@@ -8,7 +8,8 @@
     <input type="number" class="Reginput " maxlength="11" />
      <image src="{{src}}" class="Clearinput " mode="widthFix"></image>
   
-     <button class="regOnebtn"> 发送验证码</button>
+     <button class="regOnebtn btngrey none"> 发送验证码</button>
+    <button class="regOnebtn btngrey_act"> 发送验证码</button>
 
      <view class="regone-container clear none ">
         <text class="one">请输入验证码</text>
