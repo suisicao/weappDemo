@@ -9,6 +9,9 @@ page {
 .none{
     display: none;
 }
+.fl{
+    float:left;
+}
 .btngrey{
     background: #d8d8d8 !important;
     color: white;
