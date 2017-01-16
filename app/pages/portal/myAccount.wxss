@@ -1,11 +1,179 @@
 /* pages/portal/myAccount.wxss */
+.myAccount text{
+    font-size: 36rpx;
+}
+.myAccount .title{
+    display: block;
+    margin-left: 5%;
+    font-size: 32rpx;
+   margin-top: 1.5rem;
+}
 .topMess{
     background-image: url("../../images/myacc-head.jpg");
     background-size: 100%;
-
+    height: 8rem;
+    overflow: hidden;
+    color: white;
 }
 .topMess .userPhoto{
     width: 3.5rem;
-    margin-left: 5%;
+    margin-left: 7%;
     margin-top: 1rem;
+}
+.topMess  .UserMess{
+    width: 90%;   
+    padding-top: 1rem;
+    
+}
+.topMess  .UserMess>text{
+    display: block;
+    margin-left:5.5rem;  
+    margin-top: 0.2rem;
+}
+.topMess .userNumber{
+   font-size:26rpx;
+   opacity: 0.8;  
+}
+.topMess  .UserMess .userlastlogTime{
+    font-size:26rpx;
+    opacity: 0.6;
+}
+.topMess  .UserMess .userlastlogTime .time{
+    font-size:26rpx;
+  
+}
+
+.topMess .billandcard{
+    background: rgba(0,0,0,0.1);
+    height: 2.8rem;
+    width: 100%;
+    position: absolute;
+    top:5.2rem;
+}
+
+.topMess .billandcard .bills
+{
+    font-size: 30rpx;
+    width: 49%;
+    height: 100%;
+    padding-top: 0.8rem;
+    text-align: center;
+    background-image: url("../../images/myacc-img1.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 2.5rem;
+    background-position-y: 0.85rem;
+}
+.topMess .billandcard .cutline{
+    width: 3rpx;
+    background: #fff;
+    margin-top: 0.9rem;
+    height: 1.2rem;
+}
+.topMess .billandcard .cards{
+    font-size: 30rpx;
+    width: 49%;
+    height: 100%;
+    padding-top: 0.8rem;
+    text-align: center;
+    background-image: url("../../images/myacc-img2.png");
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    background-position-x: 2rem;
+    background-position-y: 0.85rem;
+}
+
+
+.myAccount .myacc-line1{
+    width: 100%;
+    background: white;
+    margin-top: 0.5rem;
+    height:4rem;
+    /*border-top: 1px solid #e8e8e8;
+     border-bottom: 1px solid #e8e8e8;*/
+    position: relative;
+}
+.myAccount .myacc-line1 .left{
+    height: 3rem;
+    padding-top: 1rem;
+    width: 50%;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+    font-size: 32rpx;
+    background-image: url("../../images/myacc-aimg1.png");
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-position-x: 2.2rem;
+    background-position-y:1rem;
+}
+.myAccount .myacc-line1 .right{
+    height: 3rem;
+    padding-top: 1rem;
+    width: 44%;
+    padding-left: 5%;
+    text-align: center;
+    font-size: 32rpx;
+    background-image: url("../../images/myacc-aimg2.png");
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-position-x: 2.2rem;
+    background-position-y: 1.1rem;
+}
+.myAccount .myacc-line1 .left .ammount{    
+    color: #909090;
+    font-size: 28rpx;
+    margin-top: 0.2rem;
+}
+.myAccount .service{
+    margin-top: 0.5rem;
+}
+.myAccount .myacc-line2{
+    width: 100%;
+    background: white;
+    height:4rem;
+    /*border-top: 1px solid #e8e8e8;*/  
+    position: relative;
+}
+.myAccount .service .bottomline{
+   border-bottom: 1px solid #e8e8e8;
+}
+.myAccount .myacc-line2 .phoneRecharge{
+      background-image: url("../../images/myacc-fimg1.png");
+}
+.myAccount .myacc-line2 .gasRecharge{
+      background-image: url("../../images/myacc-fimg2.png");
+}
+.myAccount .myacc-line2 .sdmRecharge{
+      background-image: url("../../images/myacc-fimg3.png");
+}
+.myAccount .myacc-line2 .gameRecharge{
+      background-image: url("../../images/game.png");
+}
+.myAccount .myacc-line2 .left{
+    height: 2rem;
+    padding-top: 2.2rem;
+    width: 50%;
+    border-right: 1px solid #e8e8e8;
+    text-align: center;
+    font-size: 30rpx;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-position-x: center;
+    background-position-y:0.7rem;
+}
+.myAccount .myacc-line2 .right{
+    height: 2rem;
+    padding-top: 2.2rem;
+    width: 49%;
+    text-align: center;
+    font-size: 30rpx;
+    background-repeat: no-repeat;
+    background-size: 1.3rem;
+    background-position-x: center;
+    background-position-y: 0.7rem;
+}
+
+.cardcenterImg{
+    width: 100%;
+    margin-top: 0.5rem;
 }
