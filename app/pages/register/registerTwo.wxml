@@ -4,10 +4,10 @@
         <text class="hint active">2.输入验证码 ></text>
         <text class="hint">3.设置密码</text>
     </view>
-    
+    <view class="regTwoInput">
     <input type="number" class="Reg2input " maxlength="6" />
-    <button class="regTwo_countbtn">重新获取(60)</button>
-  
+    <button class="regTwo_countbtn fl">重新获取(60)</button>
+  </view>
      <button class="regTwobtn  btngrey_act" bindtap="gotoRegthree"> 提交验证码</button>
 
 

@@ -1,11 +1,11 @@
 /* pages/portal/myAccount.wxss */
 .myAccount text{
-    font-size: 36rpx;
+    font-size: 1rem;
 }
 .myAccount .title{
     display: block;
     margin-left: 5%;
-    font-size: 32rpx;
+    font-size: 0.8rem;
    margin-top: 1.5rem;
 }
 .topMess{
@@ -28,18 +28,18 @@
 .topMess  .UserMess>text{
     display: block;
     margin-left:5.5rem;  
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
 }
 .topMess .userNumber{
-   font-size:26rpx;
+   font-size:0.7rem;
    opacity: 0.8;  
 }
 .topMess  .UserMess .userlastlogTime{
-    font-size:26rpx;
+   font-size:0.7rem;
     opacity: 0.6;
 }
 .topMess  .UserMess .userlastlogTime .time{
-    font-size:26rpx;
+    font-size:0.7rem;
   
 }
 
@@ -53,9 +53,9 @@
 
 .topMess .billandcard .bills
 {
-    font-size: 30rpx;
+    font-size: 0.8rem;
     width: 49%;
-    height: 100%;
+    height: 2rem;
     padding-top: 0.8rem;
     text-align: center;
     background-image: url("../../images/myacc-img1.png");
@@ -65,15 +65,15 @@
     background-position-y: 0.85rem;
 }
 .topMess .billandcard .cutline{
-    width: 3rpx;
+    width: 0.05rem;
     background: #fff;
     margin-top: 0.9rem;
     height: 1.2rem;
 }
 .topMess .billandcard .cards{
-    font-size: 30rpx;
+    font-size: 0.8rem;
     width: 49%;
-    height: 100%;
+    height: 2rem;
     padding-top: 0.8rem;
     text-align: center;
     background-image: url("../../images/myacc-img2.png");
@@ -89,8 +89,6 @@
     background: white;
     margin-top: 0.5rem;
     height:4rem;
-    /*border-top: 1px solid #e8e8e8;
-     border-bottom: 1px solid #e8e8e8;*/
     position: relative;
 }
 .myAccount .myacc-line1 .left{
@@ -99,7 +97,7 @@
     width: 50%;
     border-right: 1px solid #e8e8e8;
     text-align: center;
-    font-size: 32rpx;
+    font-size: 0.8rem;
     background-image: url("../../images/myacc-aimg1.png");
     background-repeat: no-repeat;
     background-size: 1.3rem;
@@ -112,7 +110,7 @@
     width: 44%;
     padding-left: 5%;
     text-align: center;
-    font-size: 32rpx;
+    font-size: 0.8rem;
     background-image: url("../../images/myacc-aimg2.png");
     background-repeat: no-repeat;
     background-size: 1.3rem;
@@ -121,7 +119,7 @@
 }
 .myAccount .myacc-line1 .left .ammount{    
     color: #909090;
-    font-size: 28rpx;
+    font-size: 0.7rem;
     margin-top: 0.2rem;
 }
 .myAccount .service{
@@ -131,11 +129,11 @@
     width: 100%;
     background: white;
     height:4rem;
-    /*border-top: 1px solid #e8e8e8;*/  
+   
     position: relative;
 }
 .myAccount .service .bottomline{
-   border-bottom: 1px solid #e8e8e8;
+   border-bottom: 0.05rem solid #e8e8e8;
 }
 .myAccount .myacc-line2 .phoneRecharge{
       background-image: url("../../images/myacc-fimg1.png");
@@ -155,7 +153,7 @@
     width: 50%;
     border-right: 1px solid #e8e8e8;
     text-align: center;
-    font-size: 30rpx;
+    font-size: 0.8rem;
     background-repeat: no-repeat;
     background-size: 1.3rem;
     background-position-x: center;
@@ -166,7 +164,7 @@
     padding-top: 2.2rem;
     width: 49%;
     text-align: center;
-    font-size: 30rpx;
+    font-size: 0.8rem;
     background-repeat: no-repeat;
     background-size: 1.3rem;
     background-position-x: center;

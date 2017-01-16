@@ -1,10 +1,11 @@
 {
     "pages": [
-        "pages/register/registerOne",
+         "pages/register/registerOne",  
+         "pages/register/registerTwo",
         "pages/index/index",
         "pages/portal/myAccount",
-        "pages/register/registerThree",
-        "pages/register/registerTwo"
+        "pages/register/registerThree"
+       
        
     ],
 
