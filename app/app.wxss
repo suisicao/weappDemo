@@ -2,7 +2,11 @@ page {
     background-color: #f5f5f5;
     margin: 0;
     padding:0;
+    font-family: "Microsoft YaHei","Hiragino Sans GB",STHeiti;
+    color: #3a3939;
+    text-decoration: none;
 }
+
 .clear{
     overflow: hidden;
 }
