@@ -5,20 +5,20 @@
         <text class="hint">3.设置密码</text>
     </view>
     
-    <input type="number" class="Reginput " maxlength="11" />
-     <image src="{{src}}" class="Clearinput " mode="widthFix"></image>
+    <input type="number" class="Reginput " maxlength="11"  value="{{inputValue}}" bindinput="checkPhone" disabled="{{disabled}}"/>
+     <image src="{{src}}" class="Clearinput {{showClose}}" mode="widthFix" bindtap="clearPhone"></image>
   
-     <button class="regOnebtn btngrey "> 发送验证码</button>
-    <button class="regOnebtn btngrey_act none"> 发送验证码</button>
+    <button class="regOnebtn btngrey {{showGrey}}"> 发送验证码</button>
+    <button class="regOnebtn btngrey_act  {{showActive}}" bindtap="showYzmfunc"> 发送验证码</button>
 
-     <view class="regone-container clear none ">
+     <view class="regone-container clear {{showYzm}}">
         <text class="one">请输入验证码</text>
         <view class="two">
             <input type="number" id="imgVariCode" name="imgVariCode"/>
             <image src="{{variimg}}" class="img" mode="widthFix" ></image>
             <text class="changeVari">换一张</text>
         </view>
-        <text class="three">确定</text> 
+        <text class="three" bindtap="gotoRegtwo">确定</text> 
      </view>
 
 </view>

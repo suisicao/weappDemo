@@ -15,5 +15,8 @@ Page({
   },
   onUnload:function(){
     // 页面关闭
+  },
+  gotoRegthree() {
+      wx.navigateTo({ url: '../register/registerThree' });
   }
 })
