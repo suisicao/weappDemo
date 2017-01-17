@@ -35,6 +35,6 @@ Page({
       })
         return;
       }
-      wx.navigateTo({ url: '../portal/myAccount' });
+      wx.navigateTo({ url: '../register/regSuc' });
   }
 })

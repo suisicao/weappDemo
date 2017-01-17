@@ -5,20 +5,20 @@ Page({
       second:5
     },
     onLoad:function(){
-        countDown(this);
+        this.countDown();
     },
-    countDown:function(that){
-        var nowsec=that.data.second;
-        console.log(nowsec+"kk/n");
-        if(nowsec==0){
-            gotoHome();
+    countDown:function(){
+        var nowsec=this.data.second;
+        var that=this;
+        if(nowsec==1){
+            this.gotoHome();
         }
         else{
             var time=setTimeout(function(){
                 that.setData({
-                second:nowsec--
+                second:--nowsec
                  });
-                 countDown(that);           
+                 that.countDown();           
         },1000)
         }       
     },
