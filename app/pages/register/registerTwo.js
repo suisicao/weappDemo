@@ -1,6 +1,8 @@
 // pages/register/registerTwo.js
 Page({
   data:{
+    receive:'',
+    receivea:'none',
     receiveYzm:''
   },
   onLoad:function(options){
@@ -12,9 +14,11 @@ Page({
         var time=60;
         var daoji=setInterval(function(){
        time--;
-       if(time===0){
+       if(time==0){
             that.setData({
-                receiveYzm:'重新获取(60)'
+                receive:'none',
+                receivea:'',
+                receiveYzm:'重新获取(59)'
             })
         clearInterval(daoji);
        }
@@ -35,7 +39,32 @@ Page({
   onUnload:function(){
     // 页面关闭
   },
-  gotoRegthree() {
+  recAgain:function(){
+         this.setData({
+              receive:'',
+              receivea:'none'
+          })
+          var that=this;
+          var time=59;
+          var daoji=setInterval(function(){
+          time--;
+          if(time==0){
+                that.setData({
+                    receive:'none',
+                    receivea:'',
+                    receiveYzm:'重新获取(59)'
+                })
+            clearInterval(daoji);
+          }
+          else{
+              that.setData({
+                  receiveYzm:'重新获取('+time+')'
+              })
+          }
+          
+        },1000);
+  },
+  gotoRegthree:function() {
       wx.navigateTo({ url: '../register/registerThree' });
   }
 })
