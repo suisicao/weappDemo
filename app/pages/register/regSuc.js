@@ -10,7 +10,8 @@ Page({
     countDown:function(){
         var nowsec=this.data.second;
         var that=this;
-        if(nowsec==1){
+        if(nowsec<=0){
+            clearTimeout(time);
             this.gotoHome();
         }
         else{
@@ -23,7 +24,7 @@ Page({
         }       
     },
      gotoHome:function() {
-        wx.navigateTo({ url: '../portal/myAccount' });
+        wx.redirectTo({ url: '../portal/myAccount' });
     } 
 });
 
