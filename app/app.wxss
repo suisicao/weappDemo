@@ -81,6 +81,9 @@ page {
     background:#fff;
     position:relative;
 }
+.registerOne  .Reginput{ 
+    width:80%;
+}
 .registerOne  .Reginput,.Reg2input{   
     margin-top:1rem;
     height:2.80rem;
@@ -89,8 +92,6 @@ page {
     color:#333333;
     border:0 none;
     padding-left:6%;
-    width:100%;
-   
 }
 
 .registerOne  .Clearinput{  
@@ -110,8 +111,8 @@ page {
 .regone-container{
     background: white;
     border: 1px dashed #ff304d;
-    width:76%;
-    margin-left:12%;
+    width:80%;
+    margin-left:10%;
     margin-top:3rem;
     
     border-radius:2px;
@@ -128,22 +129,24 @@ page {
 .regone-container .two input{
     color:#333333;
     font-size: 1rem;
-    line-height:2rem;
+    line-height:1.8rem;
+    height:1.8rem;
     float:left;
     margin-left:1rem;
-    width:5rem;
+    width:6rem;
     border:1px solid #ccc;
 }
 
 .regone-container .two .img{
-    width:3rem; 
-    margin-left:1rem; 
+    width:4rem; 
+    margin-left:0.6rem; 
     float:left;
 }
 .regone-container .two .changeVari{
-color:#ed3e4f;
-font-size:0.8rem;
-margin-left:0.4rem;
+  color:#ed3e4f;
+  font-size:1rem;
+  margin-left:0.4rem;
+  line-height:1.8rem;
 
 }
 .regone-container .three{    
@@ -153,7 +156,7 @@ color:#333333;
 float:right;
 width:100%;
 margin-top:1rem;
-font-size:0.8rem;
+font-size:1rem;
 text-align:center;
 border-top:0.05rem #ccc solid;
 background-image:url(../../images/suc.png);
