@@ -19,83 +19,89 @@ page {
 .btngrey{
     background: #d8d8d8 !important;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     line-height: 2.8rem;
     height: 2.8rem;
     width: 92%;
     margin-top:5rem;
     margin-left: 4%;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    border-radius:0.3rem;
+    -webkit-border-radius:0.3rem;
+    -moz-border-radius:0.3rem;
     }
 .btngrey_act{
-     background: #ed3e4f;
-    color: white;
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 2.8rem;
-    height: 2.8rem;
-    width: 92%;
-    margin-top:5rem;
-    margin-left: 4%;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    background:#ed3e4f;
+    color:white;
+    font-size:1rem;
+    text-align:center;
+    line-height:2.8rem;
+    height:2.8rem;
+    width:92%;
+    margin-top:2rem;
+    margin-left:4%;
+    border-radius:0.3rem;
+    -webkit-border-radius:0.3rem;
+    -moz-border-radius:0.3rem;
+
 }
 .btnblue{
     background: #6193ec;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     line-height: 2.8rem;
     height: 2.8rem;
     width: 92%;
     margin-top:5rem;
     margin-left: 4%;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
+    border-radius:0.3rem;
+    -webkit-border-radius:0.3rem;
+    -moz-border-radius:0.3rem;
 }
 /* pages/register/registerOne.wxss */
 .registerOne .tophints{
-        margin-top: 10rpx;
-        height: 100rpx;
+        margin-top: 0.5rem;
+        
 }
 .registerOne .tophints .hint{
-    font-size: 30rpx;
-    margin-left: 50rpx;
+    font-size:0.8rem;
+    margin-left: 1.1rem;
     color: #909090;
-    line-height: 5rem;
+   padding-top: 2rem;
+    line-height: 3rem;
     height: 5rem;
     text-align: right;
 }
 .registerOne .tophints .active{   
     color: #ed3e4f;   
 }
-.registerOne  .Reginput,.Reg2input{     
-    margin-top: 1rem; 
-    position: absolute; 
-    height: 2.80rem;     
-    background: #fff;
-    font-size: 36rpx;
-    color: #333333;
-    border: 0 none;
-    padding-left: 6%;
-    width: 100%;
-    float: left;    
+.regOneInput ,.regTwoInput{
+    width:100%;
+    background:#fff;
+    position:relative;
+}
+.registerOne  .Reginput,.Reg2input{   
+    margin-top:1rem;
+    height:2.80rem;
+    background:#fff;
+    font-size:1rem;
+    color:#333333;
+    border:0 none;
+    padding-left:6%;
+    width:100%;
+   
 }
 
 .registerOne  .Clearinput{  
-    position:relative;  
-    width:1rem;
-    right: 1rem;  
-    top:1.7rem;  
-    z-index: 9999;
+    z-index:9999;
+    position:absolute;
+    top:0.7rem;
+    right:1rem;
+
 }
-.registerOne .regOnebtn{
-    color: white;
+.registerOne  .Clearinput image{
+    width: 1rem;
 }
 .registerOne btn_active{
     background: #ed3e4f;
@@ -135,24 +141,25 @@ page {
     float:left;
 }
 .regone-container .two .changeVari{
-    color:#ed3e4f;
-    font-size: 36rpx;
-    margin-left:13rpx;
-    margin-top:15rpx;
+color:#ed3e4f;
+font-size:0.8rem;
+margin-left:0.4rem;
+
 }
 .regone-container .three{    
-    padding-top: 20rpx;
-    padding-bottom: 20rpx;
-    color:#333333;
-    float:right;
-    width: 100%;
-    margin-top: 25rpx;
-    font-size: 38rpx;
-    text-align: center;
-    border-top: 1rpx #ccc solid;    
-    background-image: url(../../images/suc.png);
-    background-repeat: no-repeat;
-    background-size: 50rpx;
-    background-position: 5rem 0.5rem;
+ padding-top:0.6rem;
+padding-bottom:0.6rem;
+color:#333333;
+float:right;
+width:100%;
+margin-top:1rem;
+font-size:0.8rem;
+text-align:center;
+border-top:0.05rem #ccc solid;
+background-image:url(../../images/suc.png);
+background-repeat:no-repeat;
+background-size:1.2rem;
+background-position:5rem 0.5rem;
+
 
 }
