@@ -24,7 +24,7 @@ page {
     line-height: 2.8rem;
     height: 2.8rem;
     width: 92%;
-    margin-top:5rem;
+    margin-top:2rem;
     margin-left: 4%;
     border-radius:0.3rem;
     -webkit-border-radius:0.3rem;

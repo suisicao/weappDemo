@@ -1,9 +1,9 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/portal/myAccount",
         "pages/register/registerTwo",
         "pages/register/registerOne",  
-        "pages/index/index",
         "pages/register/registerThree"
        
     ],
