@@ -7,13 +7,13 @@
     
     <view>
     <text class="Reg3input regThreetitle ">易福利账户<text>13029192929</text></text>
-    <input type="number" class="Reg3input regThreepswd" maxlength="6" placeholder="请输入登录密码"/>
+    <input type="number" class="Reg3input regThreepswd" maxlength="16" placeholder="请输入登录密码" value="{{loginPass}}" bindinput="checkPass"/>
     </view>
   
     <text class="regThreehint">注：登录密码由6-16个字符，需使用字母、数字或符号组合，不能使用纯数字、纯字母、纯符号</text>
     
     
-     <button class="regThreebtn_confirm btnblue">确定</button>
+     <button class="regThreebtn_confirm btnblue" bindtap="gotoResult">确定</button>
      <button class="regThreebtn_auth  btngrey_act">继续进行实名认证</button>
 
   
