@@ -24,7 +24,7 @@ Page({
        loginPass:e.detail.value
      })
   },
-  gotoResult:function(){
+  gotoResult:function(e){
      var tvalue=this.data.loginPass;
      var isLoginmima=/(^\d*$)|(^[A-Za-z\u4e00-\u9fa5]+$)|(^[^\w\s]+$)/
      if(tvalue==""||isLoginmima.test(tvalue)||tvalue.length>16||tvalue.length<6){
@@ -35,6 +35,11 @@ Page({
       })
         return;
       }
-      wx.navigateTo({ url: '../register/regSuc' });
+      if(e.target.dataset.type==1){
+        wx.navigateTo({ url: '../register/regSuc' });
+      }
+      if(e.target.dataset.type==2){
+        wx.navigateTo({ url: '../register/auth' });
+      }
   }
 })

@@ -2,11 +2,10 @@
     <view class="imgContain"><image src="{{regSucImg}}" mode="widthFix" class="regSucImg"></image>
     </view>
     <view class="wordhints">
-        <view>恭喜您，注册成功！</view>
+        <view>恭喜您，实名认证成功！</view>
         <view class="acchint">
         开联宝账号：<text class="userAcc">132288283947</text>
         </view>
-        <view class="authhint" bindtap="gotoResult">继续去实名认证吧！</view>
         <view class="countDownhint">
         <text class="second ">{{second}}</text>秒后跳转首页
     </view>

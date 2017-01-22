@@ -25,9 +25,6 @@ Page({
     },
      gotoHome:function() {
         wx.redirectTo({ url: '../portal/myAccount' });
-    },
-    gotoResult:function() {
-        wx.navigateTo({ url: '../register/auth' });
     }
 });
 

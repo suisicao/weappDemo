@@ -48,7 +48,13 @@ Page({
         })
     },
     gotoRegtwo:function() {
-          wx.request({
+        wx.navigateTo({ url: '../register/registerTwo' });
+    }
+});
+
+
+
+          /*wx.request({
                     url:'https://www.klb.com/smartmember/account/Register/init',    
           method: 'POST',
           data:{"mobile":"13761112333"},
@@ -60,7 +66,4 @@ Page({
               console.log(res.statusCode)
           }
 
-      })
-        /*wx.navigateTo({ url: '../register/registerTwo' });*/
-    }
-});
+      })*/
