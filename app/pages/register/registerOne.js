@@ -9,7 +9,7 @@ Page({
         showYzm:'none'
     },
     checkPhone:function(e) {
-        var value = e.detail.value;
+       var value = e.detail.value;
         var isPhone =/^(13[0-9]{9})$|^(14[0-9]{9})$|^(15[0-9]{9})$|^(18[0-9]{9})$|^(17[0-9]{9})$/;
         if(value!=""){
              this.setData({
@@ -48,6 +48,19 @@ Page({
         })
     },
     gotoRegtwo:function() {
-        wx.navigateTo({ url: '../register/registerTwo' });
+          wx.request({
+                    url:'https://www.klb.com/smartmember/account/Register/init',    
+          method: 'POST',
+          data:{"mobile":"13761112333"},
+          header: {  
+            "content-type": "application/x-www-form-urlencoded" 
+          }, 
+          success:function(res) {
+              console.log(res)
+              console.log(res.statusCode)
+          }
+
+      })
+        /*wx.navigateTo({ url: '../register/registerTwo' });*/
     }
 });
