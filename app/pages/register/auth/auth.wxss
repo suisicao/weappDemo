@@ -1,0 +1,38 @@
+/* pages/register/auth/auth.wxss */
+.regAuth{
+     font-size: 0.9rem;
+}
+.regAuth .userAcc{
+    padding-left: 5%;
+    margin-top: 2rem;
+}
+.regAuth .userAcc .userID{
+    margin-left: 5%;
+}
+
+.regAuth .authMess{
+    margin-top: 1rem;
+    background: #fff;
+}
+.regAuth .authMess .messItem{
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: -1px;
+}
+.regAuth .authMess .messItem .label{
+   color: #909090;
+   text-align: left;
+   width: 30%;
+   padding-left: 5%;
+   height: 3rem;
+   line-height: 3rem;
+}
+.regAuth .authMess .messItem .input{
+   color: #333333;
+   height: 3rem;
+   line-height: 3rem;
+   text-align: left;
+   width: 65%;
+   margin-left: 15%;
+}

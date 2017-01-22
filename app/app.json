@@ -1,5 +1,6 @@
 {
     "pages": [
+         "pages/register/auth/auth",
         "pages/register/registerOne",
         "pages/index/index",
         "pages/register/registerTwo",  
