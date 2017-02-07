@@ -1,5 +1,3 @@
-var styleMy= require('../../lib/styleMy.js');
-console.log(styleMy.showModal())
 Page({
   data:{
     loginPass:''

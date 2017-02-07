@@ -16,9 +16,9 @@
      <view class="regone-container clear {{showYzm}}">
         <text class="one">请输入验证码</text>
         <view class="two">
-            <input type="number" id="imgVariCode" name="imgVariCode" maxlength="4"/>
+            <input type="number"  maxlength="4" value="{{yzmValue}}" bindinput="checkYzm"/>
             <image src="{{variimg}}" class="img" mode="widthFix" ></image>
-            <text class="changeVari">换一张</text>
+            <text class="changeVari" bindtap="changeYzmfunc">换一张</text>
         </view>
         <text class="three" bindtap="gotoRegtwo">确定</text> 
      </view>

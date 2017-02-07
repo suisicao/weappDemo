@@ -1,7 +1,13 @@
+const config = require('../../config.js');
+const api = require('../../lib/api.js');
+const request = require('../../lib/request.js');
+
 Page({
     data:{
+        inputValue:'',
+        yzmValue:'',
         src:'../../images/close.png',
-        variimg:'../../images/yanzhengma.jpg',
+        variimg:'',
         disabled:false,
         showClose:'none',
         showGrey:'',
@@ -22,10 +28,12 @@ Page({
             })
         }
         if(isPhone.test(value)){
-            this.setData({
-                showGrey:'none',
-                showActive:''
-            })
+                this.setData({
+                    showGrey:'none',
+                    showActive:'',
+                    inputValue:value                  
+                })
+
         }
         else{
             this.setData({
@@ -41,29 +49,65 @@ Page({
         })
     },
     showYzmfunc:function() {
+        var url='/servlet/validateCodeServlet?validateName=sessionRegVariCode';
         this.setData({
             disabled:'disabled',
             showYzm:'',
-            showClose:'none'
+            showClose:'none',
+            variimg:api.getUrl(url) 
+        })
+    },
+    changeYzmfunc:function() {
+        var url='/servlet/validateCodeServlet?validateName=sessionRegVariCode&t=' + new Date().getTime();
+        this.setData({
+            variimg:api.getUrl(url)
+        })
+    },
+    checkYzm:function(e) {
+        var value = e.detail.value;
+        this.setData({
+            yzmValue:value                  
         })
     },
     gotoRegtwo:function() {
+        var inputValue=this.data.inputValue;
+        var yzmValue=this.data.yzmValue;
+        var url='/servlet/validateCodeServlet?validateName=sessionRegVariCode&t=' + new Date().getTime();
+        if(!/^\d{4}$/.test(yzmValue)){
+            wx.showModal({
+                title: '',
+                content: '请输入正确图形验证码',
+                showCancel:false
+            })
+            return;
+        }
+        console.log(inputValue)
+        console.log(yzmValue)
+        request({ 
+            method: 'POST', 
+            header: {  
+            "content-type":               "application/x-www-form-urlencoded" 
+          }, 
+            url: api.getUrl('/security/register/sendVerifyCode'),
+            data: { 
+                userAccId:inputValue,
+                regVariCode:yzmValue,
+            }
+        }).then((resp) => {
+            console.log(resp)
+        if(resp.resCode!='0000'){
+            this.setData({
+                variimg:api.getUrl(url)
+            })
+            wx.showModal({
+                title: '',
+                content: resp.resMsg,
+                showCancel:false
+            })
+            return;
+        }
         wx.navigateTo({ url: '../register/registerTwo' });
+        })
+        
     }
 });
-
-
-
-          /*wx.request({
-                    url:'https://www.klb.com/smartmember/account/Register/init',    
-          method: 'POST',
-          data:{"mobile":"13761112333"},
-          header: {  
-            "content-type": "application/x-www-form-urlencoded" 
-          }, 
-          success:function(res) {
-              console.log(res)
-              console.log(res.statusCode)
-          }
-
-      })*/
