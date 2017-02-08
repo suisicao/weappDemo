@@ -1,8 +1,8 @@
 {
-    "pages": [
+    "pages": [          
         "pages/register/registerOne",
         "pages/index/index",
-        "pages/register/registerTwo",  
+        "pages/register/registerTwo",
         "pages/register/registerThree",
         "pages/register/regSuc",
         "pages/register/auth",

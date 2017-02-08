@@ -1,0 +1,46 @@
+/* pages/register/registerTwo.wxss */
+.regOneInput{
+    margin-top:3rem;
+}
+.regTwoInput{
+    margin-top:-0.9rem;
+}
+.regTwo_countbtn{
+  position:relative;
+z-index:3;
+float:right;
+right:0.55rem;
+top:-2.5rem;
+color:#fff;
+background:#d8d8d8;
+line-height:2.2rem;
+text-align:center;
+border-radius:0.2rem;
+-webkit-border-radius:0.2rem;
+font-size:1rem;
+
+}
+
+.regTwo_countbtna{
+  position:relative;
+z-index:3;
+float:right;
+right:0.55rem;
+top:-2.5rem;
+color:#fff;
+background:#ed3e4f;
+width:37%;
+line-height:2.2rem;
+text-align:center;
+border-radius:0.2rem;
+-webkit-border-radius:0.2rem;
+font-size:1rem;
+
+}
+.hints{
+  font-size:0.8rem;
+margin-left:1rem;
+margin-top:1rem;
+margin-bottom:-1.5rem;
+color:#ED3E4F;
+}
