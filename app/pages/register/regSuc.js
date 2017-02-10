@@ -2,8 +2,33 @@
 Page({
      data:{
       regSucImg:'../../images/suc.png',
-      second:5
+      second:5,
+      openId:'',
+      phone:''
     },
+     onReady: function() {
+      storage.getStorage({
+          key: 'openId'
+      }).then((ress) => {
+          this.setData({
+              openId:ress
+          });
+      request({ 
+          method: 'POST', 
+          header: {  
+          "content-type":               "application/x-www-form-urlencoded" 
+      }, 
+          url: api.getUrl('/security/register/getPhone'),
+          data: { 
+              openId:ress
+          }
+        }).then((resp) => {
+          this.setData({
+              phone:resp.data
+          });
+        })  
+      })
+  },
     onLoad:function(){
         this.countDown();
     },

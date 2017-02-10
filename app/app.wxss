@@ -76,6 +76,9 @@ page {
 .registerOne .tophints .active{   
     color: #ed3e4f;   
 }
+.regOneInput{
+    margin-top:3rem;
+}
 .regOneInput ,.regTwoInput{
     width:100%;
     background:#fff;
@@ -85,7 +88,6 @@ page {
     width:80%;
 }
 .registerOne  .Reginput,.Reg2input{   
-    margin-top:1rem;
     height:2.80rem;
     background:#fff;
     font-size:1rem;
@@ -93,7 +95,10 @@ page {
     border:0 none;
     padding-left:6%;
 }
-
+.Reg2input{
+    border-top:0.05rem solid #e8e8e8;
+    border-bottom:0.05rem solid #e8e8e8;
+}
 .registerOne  .Clearinput{  
     z-index:9999;
     position:absolute;

@@ -1,17 +1,13 @@
 <view class="registerOne">
-    <view class="tophints">
-        <text class="hint ">1.输入手机号 ></text>
-        <text class="hint active">2.输入验证码 ></text>
-        <text class="hint">3.设置密码</text>
-    </view> 
-
- <view class="regTwoInput">   
-    <input type="number" class="Reg2input " maxlength="6" placeholder="请输入短信验证码"/>
-    <button class="regTwo_countbtn {{receive}}">{{receiveYzm}}</button>
-    <button class="regTwo_countbtna {{receivea}}" bindtap="recAgain">重新获取</button>
-  </view>
+    <view class="regOneInput">
+    <text class="Reg3input regThreetitle ">易福利账户<text>{{phone}}</text></text>
+    <input type="password" class="Reg3input regThreepswd" maxlength="16" placeholder="请输入登录密码" value="{{loginPass}}" bindinput="checkPass"/>
+    </view>
   
-     <button class="regTwobtn  btngrey_act" bindtap="gotoRegthree"> 提交验证码</button>
-
-
+    <text class="regThreehint">注：登录密码由6-16个字符，需使用字母、数字或符号组合，不能使用纯数字、纯字母、纯符号</text>
+    
+    
+     <button class="regThreebtn_confirm btnblue" bindtap="gotoResult" data-type="1">确定</button>
+     <button class="regThreebtn_auth  btngrey_act" bindtap="gotoResult" data-type="2">继续进行实名认证</button>
+  
 </view>

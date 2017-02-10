@@ -1,16 +1,10 @@
 /* pages/register/registerTwo.wxss */
-.regOneInput{
-    margin-top:3rem;
-}
-.regTwoInput{
-    margin-top:-0.9rem;
-}
 .regTwo_countbtn{
   position:relative;
 z-index:3;
 float:right;
 right:0.55rem;
-top:-2.5rem;
+top:-2.55rem;
 color:#fff;
 background:#d8d8d8;
 line-height:2.2rem;
@@ -26,7 +20,7 @@ font-size:1rem;
 z-index:3;
 float:right;
 right:0.55rem;
-top:-2.5rem;
+top:-2.55rem;
 color:#fff;
 background:#ed3e4f;
 width:37%;

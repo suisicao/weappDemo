@@ -4,7 +4,7 @@
     <view class="wordhints">
         <view>恭喜您，注册成功！</view>
         <view class="acchint">
-        开联宝账号：<text class="userAcc">132288283947</text>
+        开联宝账号：<text class="userAcc">{{phone}}</text>
         </view>
         <view class="authhint" bindtap="gotoResult">继续去实名认证吧！</view>
         <view class="countDownhint">
