@@ -14,7 +14,8 @@ Page({
         receivea:'none',
         receiveYzm:'获取验证码',
         checkHint:'',
-        openId:''
+        openId:'',
+        src:'../../images/close.png'
     },
     onReady: function() {
         storage.getStorage({
