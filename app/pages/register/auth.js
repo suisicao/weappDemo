@@ -1,26 +1,39 @@
-// pages/register/auth/auth.js
+const config = require('../../config.js');
+const api = require('../../lib/api.js');
+const request = require('../../lib/request.js');
+const storage = require('../../lib/storage.js');
 Page({
   data:{
     cardHolderName:'',
     cardHolderId:'',
     payPwd:'',
-    payPwdtwo:''
+    payPwdtwo:'',
+    openId:'',
+    phone:''
 
   },
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
-  },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+  onReady: function() {
+      storage.getStorage({
+          key: 'openId'
+      }).then((ress) => {
+          this.setData({
+              openId:ress
+          });
+      request({ 
+          method: 'POST', 
+          header: {  
+          "content-type":               "application/x-www-form-urlencoded" 
+      }, 
+          url: api.getUrl('/security/register/getPhone'),
+          data: { 
+              openId:ress
+          }
+        }).then((resp) => {
+          this.setData({
+              phone:resp.data
+          });
+        })  
+      })
   },
   checkName:function(e){
      this.setData({
@@ -47,6 +60,7 @@ Page({
       	var cardHolderId=this.data.cardHolderId;
         var payPwd=this.data.payPwd;
         var payPwdtwo=this.data.payPwdtwo;
+        var openId=this.data.openId;
         if(cardHolderName==""){
     			wx.showModal({
             title: '',
@@ -81,7 +95,32 @@ Page({
           })
         return;
     		}
-        wx.navigateTo({ url: '../register/authSuc' });
 
+        request({ 
+            method: 'POST', 
+            header: {  
+            "content-type":               "application/x-www-form-urlencoded" 
+        }, 
+            url: api.getUrl('/security/auth/certification'),
+            data: { 
+                cardHolderName:cardHolderName,
+                cardHolderId:cardHolderId,
+                payPwd:payPwd,
+                passwordAgain:payPwdtwo,
+                openId:openId
+            }
+        }).then((resp) => {
+            console.log(resp)
+            if(resp.resCode=='0000'){
+               wx.navigateTo({ url: '../register/regSuc' })
+            }else{
+                wx.showModal({
+                    title: '',
+                    content: resp.resMsg,
+                    showCancel:false
+                })
+                return;
+            }
+        })
   }
 })

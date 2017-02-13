@@ -48,9 +48,7 @@ Page({
       })
         return;
       }
-      if(e.target.dataset.type==1){
-        wx.navigateTo({ url: '../register/regSuc' });
-        request({ 
+     request({ 
             method: 'POST', 
             header: {  
             "content-type":               "application/x-www-form-urlencoded" 
@@ -63,7 +61,12 @@ Page({
         }).then((resp) => {
             console.log(resp)
             if(resp.resCode=='0000'){
-                wx.navigateTo({ url: '../register/regSuc' });
+                if(e.target.dataset.type==1){
+                    wx.navigateTo({ url: '../register/regSuc' });
+                }
+                if(e.target.dataset.type==2){
+                    wx.navigateTo({ url: '../register/auth' });
+                }
             }else{
                 wx.showModal({
                     title: '',
@@ -73,9 +76,5 @@ Page({
                 return;
             }
         })
-      }
-      if(e.target.dataset.type==2){
-        wx.navigateTo({ url: '../register/auth' });
-      }
   }
 })

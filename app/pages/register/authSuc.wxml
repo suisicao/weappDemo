@@ -4,7 +4,7 @@
     <view class="wordhints">
         <view>恭喜您，实名认证成功！</view>
         <view class="acchint">
-        开联宝账号：<text class="userAcc">132288283947</text>
+        开联宝账号：<text class="userAcc">{{phone}}</text>
         </view>
         <view class="countDownhint">
         <text class="second ">{{second}}</text>秒后跳转首页

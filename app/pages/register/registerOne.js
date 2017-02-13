@@ -81,6 +81,7 @@ Page({
                 openId:openId
             }
         }).then((resp) => {
+            console.log(resp)
             if(resp.resCode=='0000'){
                 this.setData({
                     receive:'',
@@ -132,9 +133,6 @@ Page({
             })
             return;
         }
-        console.log(phoneValue)
-        console.log(openId)
-        console.log(yzmValue) 
         request({ 
             method: 'POST', 
             header: {  
