@@ -1,9 +1,35 @@
-
+const config = require('../../config.js');
+const api = require('../../lib/api.js');
+const request = require('../../lib/request.js');
+const storage = require('../../lib/storage.js');
 Page({
      data:{
       regSucImg:'../../images/suc.png',
       second:5
     },
+    onReady: function() {
+      storage.getStorage({
+          key: 'openId'
+      }).then((ress) => {
+          this.setData({
+              openId:ress
+          });
+      request({ 
+          method: 'POST', 
+          header: {  
+          "content-type":               "application/x-www-form-urlencoded" 
+      }, 
+          url: api.getUrl('/security/register/getPhone'),
+          data: { 
+              openId:ress
+          }
+        }).then((resp) => {
+          this.setData({
+              phone:resp.data
+          });
+        })  
+      })
+  },
     onLoad:function(){
         this.countDown();
     },
@@ -24,7 +50,7 @@ Page({
         }       
     },
      gotoHome:function() {
-        wx.redirectTo({ url: '../portal/myAccount' });
+        wx.redirectTo({ url: '../account/login' });
     }
 });
 

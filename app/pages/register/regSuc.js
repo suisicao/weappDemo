@@ -1,10 +1,14 @@
-
+const config = require('../../config.js');
+const api = require('../../lib/api.js');
+const request = require('../../lib/request.js');
+const storage = require('../../lib/storage.js');
 Page({
      data:{
       regSucImg:'../../images/suc.png',
       second:5,
       openId:'',
-      phone:''
+      phone:'',
+      tiaozhuan:true
     },
      onReady: function() {
       storage.getStorage({
@@ -44,14 +48,23 @@ Page({
                 that.setData({
                 second:--nowsec
                  });
-                 that.countDown();           
+                 var tiaozhuan=that.data.tiaozhuan;
+                 if(tiaozhuan){
+                    that.countDown(); 
+                 }else{
+                    clearTimeout(time); 
+                 }
+                           
         },1000)
         }       
     },
      gotoHome:function() {
-        wx.redirectTo({ url: '../portal/myAccount' });
+        wx.redirectTo({ url: '../account/login' });
     },
     gotoResult:function() {
+        this.setData({
+            tiaozhuan:false
+        });
         wx.navigateTo({ url: '../register/auth' });
     }
 });

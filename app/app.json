@@ -1,15 +1,17 @@
 {
     "pages": [
+<<<<<<< HEAD
          "pages/actlist/phoneRecharge/one",
          "pages/account/login",
+=======
+>>>>>>> 9676f620c95ad45570dcd9077cd2c0ef8e52dea4
         "pages/register/registerOne",
-        "pages/register/registerTwo",
-        "pages/portal/myAccount",       
-        "pages/index/index",
+        "pages/register/registerTwo",       
         "pages/register/regSuc",
         "pages/register/auth",
-        "pages/register/authSuc"
-       
+        "pages/register/authSuc",
+        "pages/account/login",
+        "pages/portal/myAccount"
     ],
 
     "window": {

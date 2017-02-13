@@ -1,14 +1,27 @@
+const config = require('../../config.js');
+const api = require('../../lib/api.js');
+const request = require('../../lib/request.js');
+const storage = require('../../lib/storage.js');
 Page({
 data:{
         phoneValue:'',
-        yzmValue:'',
+        password:'',
         disabled:false,
         showClose:'none',
         showActive:'none',
         showGrey:'',
-        showPswdsrc:'../../images/loginbg-close.png',
         src:'../../images/close.png',
-      loginHead:'../../images/login-head.png'
+        loginHead:'../../images/login-head.png',
+        openId:''
+    },
+    onReady: function() {
+        storage.getStorage({
+            key: 'openId'
+        }).then((ress) => {
+            this.setData({
+                openId:ress
+            }) 
+        })
     },
     checkPhone:function(e) {
        var value = e.detail.value;
@@ -44,6 +57,49 @@ data:{
         this.setData({
             phoneValue:'',
             showClose:'none'
+        })
+    },
+    checkpass:function(e) {
+        var value = e.detail.value;
+         this.setData({
+           password: value  
+        })
+    },
+    gotoAcc:function() {
+        var openId=this.data.openId;
+        var userAccId=this.data.phoneValue;
+        var loginPwd=this.data.password;
+        if(loginPwd==''){
+            wx.showModal({
+                title: '',
+                content: '请输入密码',
+                showCancel:false
+            })
+            return;
+        }
+        request({ 
+            method: 'POST', 
+            header: {  
+            "content-type":               "application/x-www-form-urlencoded" 
+        }, 
+            url: api.getUrl('/security/register/login'),
+            data: { 
+                openId: openId,
+                userAccId:userAccId,
+                loginPwd:loginPwd
+            }
+        }).then((resp) => {
+            console.log(resp)
+            if(resp.resCode=='0000'){
+                wx.redirectTo({ url: '../portal/myAccount' }            );
+            }else{
+                wx.showModal({
+                    title: '',
+                    content: resp.resMsg,
+                    showCancel:false
+                })
+                return;
+            }
         })
     }
 });

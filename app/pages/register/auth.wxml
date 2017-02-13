@@ -1,6 +1,6 @@
 <view class="regAuth">
     <view class="userAcc">易福利账户 
-    <text class="userID">13029192929</text>
+    <text class="userID">{{phone}}</text>
     </view>
 
     <view class="authMess">

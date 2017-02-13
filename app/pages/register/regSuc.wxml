@@ -8,7 +8,7 @@
         </view>
         <view class="authhint" bindtap="gotoResult">继续去实名认证吧！</view>
         <view class="countDownhint">
-        <text class="second ">{{second}}</text>秒后跳转首页
+        <text class="second ">{{second}}</text>秒后跳转登录页
     </view>
     
     </view>
