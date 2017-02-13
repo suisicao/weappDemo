@@ -1,5 +1,6 @@
 {
     "pages": [
+         "pages/actlist/phoneRecharge/one",
          "pages/account/login",
         "pages/register/registerOne",
         "pages/register/registerTwo",
