@@ -148,7 +148,7 @@ Page({
         }).then((resp) => {
             console.log(resp)
             if(resp.resCode=='0000'){
-                wx.navigateTo({ url: '../register/registerTwo' });
+                wx.redirectTo({ url: '../register/registerTwo' });
             }else{
                 wx.showModal({
                     title: '',

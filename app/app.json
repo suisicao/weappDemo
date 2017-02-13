@@ -1,14 +1,12 @@
 {
     "pages": [
-         "pages/account/login",
         "pages/register/registerOne",
-        "pages/register/registerTwo",
-        "pages/portal/myAccount",       
-        "pages/index/index",
+        "pages/register/registerTwo",       
         "pages/register/regSuc",
         "pages/register/auth",
-        "pages/register/authSuc"
-       
+        "pages/register/authSuc",
+        "pages/account/login",
+        "pages/portal/myAccount"
     ],
 
     "window": {

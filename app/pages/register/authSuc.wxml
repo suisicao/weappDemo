@@ -7,7 +7,7 @@
         开联宝账号：<text class="userAcc">{{phone}}</text>
         </view>
         <view class="countDownhint">
-        <text class="second ">{{second}}</text>秒后跳转首页
+        <text class="second ">{{second}}</text>秒后跳转登录页
     </view>
     
     </view>

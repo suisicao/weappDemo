@@ -62,10 +62,10 @@ Page({
             console.log(resp)
             if(resp.resCode=='0000'){
                 if(e.target.dataset.type==1){
-                    wx.navigateTo({ url: '../register/regSuc' });
+                    wx.redirectTo({ url: '../register/regSuc' });
                 }
                 if(e.target.dataset.type==2){
-                    wx.navigateTo({ url: '../register/auth' });
+                    wx.redirectTo({ url: '../register/auth' });
                 }
             }else{
                 wx.showModal({

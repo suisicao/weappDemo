@@ -112,7 +112,7 @@ Page({
         }).then((resp) => {
             console.log(resp)
             if(resp.resCode=='0000'){
-               wx.navigateTo({ url: '../register/regSuc' })
+               wx.redirectTo({ url: '../register/authSuc' })
             }else{
                 wx.showModal({
                     title: '',

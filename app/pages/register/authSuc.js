@@ -50,7 +50,7 @@ Page({
         }       
     },
      gotoHome:function() {
-        wx.redirectTo({ url: '../portal/myAccount' });
+        wx.redirectTo({ url: '../account/login' });
     }
 });
 

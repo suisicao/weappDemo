@@ -7,7 +7,8 @@ Page({
       regSucImg:'../../images/suc.png',
       second:5,
       openId:'',
-      phone:''
+      phone:'',
+      tiaozhuan:true
     },
      onReady: function() {
       storage.getStorage({
@@ -47,14 +48,23 @@ Page({
                 that.setData({
                 second:--nowsec
                  });
-                 that.countDown();           
+                 var tiaozhuan=that.data.tiaozhuan;
+                 if(tiaozhuan){
+                    that.countDown(); 
+                 }else{
+                    clearTimeout(time); 
+                 }
+                           
         },1000)
         }       
     },
      gotoHome:function() {
-        wx.redirectTo({ url: '../portal/myAccount' });
+        wx.redirectTo({ url: '../account/login' });
     },
     gotoResult:function() {
+        this.setData({
+            tiaozhuan:false
+        });
         wx.navigateTo({ url: '../register/auth' });
     }
 });
