@@ -18,15 +18,18 @@ App({
                         code: res.code
                     }
             }).then((resp) => {
+              console.log(resp)
                 storage.setStorage({
                   key: 'openId',
                   data: resp.openId,
                 }).then((ress) => {
                    if(resp.resCode=='0000'){
-                    wx.navigateTo({ url: '../portal/myAccount' });
+                    wx.redirectTo(
+                      { url: 'pages/portal/myAccount' });
                     }
                    if(resp.resCode=='0001'){
-                      wx.navigateTo({ url: '../register/registerOne' });
+                      wx.redirectTo({ 
+                        url: 'pages/register/registerOne' });
                     }
                 })
             })

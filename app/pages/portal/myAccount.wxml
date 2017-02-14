@@ -1,12 +1,12 @@
-<view class="myAccount">
+<view class="myAccount" bindtap="auth">
     <view class="topMess">
         <image class="userPhoto fl " src="{{photoImg}}" mode="widthFix"></image>
         <view class="UserMess">
             <text class="userName">
-            <text class="uName">用户名</text>,你好
+            <text class="uName">{{name}}</text>，你好
             </text>
-            <text class="userNumber">15110377845</text>
-            <text class="userlastlogTime">上次登录时间：<text class="time">2015-12-23 12:00:00</text>      
+            <text class="userNumber">{{phone}}</text>
+            <text class="userlastlogTime">上次登录时间：<text class="time">{{lastTime}}</text>      
             </text>
         </view>
         <view class="billandcard">
@@ -19,7 +19,7 @@
     <text class="title">账户</text>
     <view class="account myacc-line1">
         <view class="balance left fl">余额
-            <view class="ammount">100.00</view>
+            <view class="ammount">{{remindAccount}}</view>
         </view>
         <text class="paycoed right fl">付款码</text>
     </view>
@@ -27,7 +27,7 @@
     <text class="title">服务</text>
     <view class="service">
     <view class="myacc-line2 bottomline ">
-        <view class="phoneRecharge left fl">手机充值</view>
+        <view class="phoneRecharge left fl" bindtap="phoneRecharge">手机充值</view>
         <view class="gasRecharge right fl">加油卡充值</view>
     </view>
     <view class="myacc-line2">

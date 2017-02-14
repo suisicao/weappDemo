@@ -2,16 +2,22 @@
     <image class="topImg" src="{{phonerRchgImg}}" mode="widthFix"></image>
     
     <view class="phoneInput">
-    <input class="phoneNum" maxlength="11" placeholder="请输入电话号码" bindinput="checkPhone"/>
-    <view class="phoneAddr {{checkphoneAddr}}">(上海移动)</view>
+    <input class="phoneNum" maxlength="11" placeholder="请输入电话号码" bindinput="checkPhone" value="{{phone}}"/>
+    <view class="phoneAddr {{checkphoneAddr}}">({{phoneAddr}})</view>
     </view>
-
-    <view class="rechargeAmount">
-        <view class="onepriceItem {{isChoosen==0?'':'choosenPrice'}} fl" bindtap="selectPrice">
+    <view wx:for="{{phoneList}}" class="rechargeAmount">
+        <view class="onepriceItem choosenPrice fl" data-price="{{item.prodContent}}" bindtap="phonecharge">
+            <text class="price">{{item.prodContent/100
+}}元</text>
+            <text class="sellpricce">售价:{{item.prodPrice/100}}元</text>
+        </view>
+    </view>
+    <!--<view class="rechargeAmount">
+        <view class="onepriceItem fl">
             <text class="price">10元</text>
             <text class="sellpricce">售价：10.00元</text>
         </view>
-         <view class="onepriceItem {{isChoosen==0?'':'choosenPrice'}} fl" bindtap="selectPrice">
+         <view class="onepriceItem fl">
             <text class="price">20元</text>
             <text class="sellpricce">售价：20.00元</text>
         </view>
@@ -35,5 +41,5 @@
             <text class="price">500元</text>
             <text class="sellpricce">售价：500.00元</text>
         </view>
-    </view>
+    </view>-->
 </view>
