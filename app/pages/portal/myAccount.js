@@ -5,7 +5,7 @@ const storage = require('../../lib/storage.js');
 Page({
   data:{
     openId:'',
-    photoImg: "../../images/myacc-headpic.png",
+    avatarUrl: "../../images/myacc-headpic.png",
     cardcenterImg:"../../images/kquan.jpg",
     name:'',
     lastTime:'',
@@ -17,6 +17,13 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
   },
   onReady: function() {
+      storage.getStorage({
+          key: 'avatarUrl'
+      }).then((ress) => {
+          this.setData({
+              avatarUrl:ress
+      });
+      });
       storage.getStorage({
           key: 'openId'
       }).then((ress) => {
@@ -55,7 +62,7 @@ Page({
         })    
       })
   },
-  auth:function() {
+  auth:function(e) {
     if(this.data.auth==0){
         wx.showModal({
             title: '',
@@ -70,6 +77,8 @@ Page({
     }
   },
   phoneRecharge:function() {
+    if(this.data.auth!=0){
     wx.navigateTo({ url: '../actlist/phoneRecharge/one' });
+    }
   }
 })
