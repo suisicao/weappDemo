@@ -3,12 +3,11 @@ const api = require('lib/api.js');
 const request = require('lib/request.js');
 const storage = require('lib/storage.js');
 App({
-  onLaunch: function() {
+  /*onLaunch: function() {
     wx.login({
       success: function(res) {
       wx.getUserInfo({
         success: function (res) {
-          console.log();
           storage.setStorage({
             key: 'avatarUrl',
             data: res.userInfo.avatarUrl,
@@ -47,5 +46,5 @@ App({
         }
       }
     });
-  }
+  }*/
 })

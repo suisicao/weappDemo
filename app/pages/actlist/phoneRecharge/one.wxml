@@ -5,7 +5,7 @@
     <input class="phoneNum" maxlength="11" placeholder="请输入电话号码" bindinput="checkPhone" value="{{phone}}"/>
     <view class="phoneAddr {{checkphoneAddr}}">({{phoneAddr}})</view>
     </view>
-    <view wx:for="{{phoneList}}" class="rechargeAmount">
+    <view wx:for="{{phoneList}}" class="rechargeAmount" wx:for-item="item">
         <view class="onepriceItem choosenPrice fl" data-price="{{item.prodContent}}" bindtap="phonecharge">
             <text class="price">{{item.prodContent/100
 }}元</text>
