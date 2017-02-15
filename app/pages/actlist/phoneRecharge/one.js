@@ -18,7 +18,8 @@ Page({
     ActPotNum:'0',
     userPayPswd:'',
     showRechargeAmt:'',
-    chosenPayway:''
+    chosenPayway:'',
+    paywaytext:''
   },
   onReady: function() {
       storage.getStorage({
@@ -190,6 +191,7 @@ Page({
       if(chosenWay=='wxin'){
            this.setData({
           chosenPayway:this.data.paywayWxImg,
+          paywaytext:'微信支付',
           showPayway:'none',
           showPswdInput:'',
       })
@@ -197,11 +199,20 @@ Page({
       else{
            this.setData({
           chosenPayway:this.data.paywayBalImg,
+          paywaytext:'账户余额',
           showPayway:'none',
           showPswdInput:'',
       })
       }
      
+  },
+  chagepayway:function(e){
+      this.setData({
+           showPayway:'',
+            showPswdInput:'none',
+            ActPotNum:'0',
+            userPayPswd:'',              
+      })
   },
   PswdInput:function(e){
       var currNum=e.currentTarget.dataset.num;
@@ -218,7 +229,7 @@ Page({
         userPayPswd:currPswd
         });
       }      
-      console.log("当前选择的数字"+currNum+"当前输入密码："+this.data.userPayPswd);
+    //   console.log("当前选择的数字"+currNum+"当前输入密码："+this.data.userPayPswd);
   },
   delActpot:function(e){
       /*删除输入的密码 */
@@ -239,7 +250,7 @@ Page({
              userPayPswd:currPswd==0?'':currPswd
           });
       }
-        console.log("当前密码："+this.data.userPayPswd+'activepotNum :'+this.data.ActPotNum);
+        // console.log("当前密码："+this.data.userPayPswd+'activepotNum :'+this.data.ActPotNum);
 
   }
 })

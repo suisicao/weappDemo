@@ -78,9 +78,9 @@
             </view> 
             <view class="changePayway fl">
                 当前付款方式：
-                <text class="chosenWay">账户余额</text>
+                <text class="chosenWay">{{paywaytext}}</text>
             </view>   
-             <view class="changeWay fl">更换</view>
+             <view class="changeWay fl" bindtap="chagepayway">更换</view>
         </view><!--上面的显示部分-->
 
         <view class="NumKeyboard ">
