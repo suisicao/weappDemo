@@ -1,13 +1,15 @@
 {
     "pages": [
+         "pages/actlist/phoneRecharge/one",
+         "pages/portal/myAccount",
+        "pages/portal/balance/item",
         "pages/register/registerOne",
         "pages/register/registerTwo",       
         "pages/register/regSuc",
         "pages/register/auth",
         "pages/register/authSuc",
-        "pages/account/login",
-        "pages/portal/myAccount",
-        "pages/actlist/phoneRecharge/one"
+        "pages/account/login"       
+       
         
     ],
 

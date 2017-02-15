@@ -9,7 +9,17 @@ Page({
     phone:'',
     openId:'',
     phoneList:[],
-    phoneAddr:''
+    phoneAddr:'',
+    closePay:'../../../images/close.png',
+    paywayBalImg:'../../../images/myacc-aimg1.png',
+    paywayWxImg:'../../../images/weixin.png',
+    showPayway:'none',
+    showPswdInput:'none',
+    ActPotNum:'0',
+    userPayPswd:'',
+    showRechargeAmt:'',
+    chosenPayway:'',
+    paywaytext:''
   },
   onReady: function() {
       storage.getStorage({
@@ -157,6 +167,90 @@ Page({
                     return;
                 }
             })
-        })
+        }
+             
+        
+        )
+  /**显示设置 */
+          this.setData({
+            showPayway:'',
+            showRechargeAmt:rechargeAmt/100
+        });
+  },
+  closePay:function(e){
+       this.setData({
+            showPayway:'none',
+            showPswdInput:'none',
+            ActPotNum:'0',
+            userPayPswd:'',
+            showRechargeAmt:''  
+        });
+  },
+  chosePayway:function(e){
+      var chosenWay=e.currentTarget.dataset.payway;
+      if(chosenWay=='wxin'){
+           this.setData({
+          chosenPayway:this.data.paywayWxImg,
+          paywaytext:'微信支付',
+          showPayway:'none',
+          showPswdInput:'',
+      })
+      }
+      else{
+           this.setData({
+          chosenPayway:this.data.paywayBalImg,
+          paywaytext:'账户余额',
+          showPayway:'none',
+          showPswdInput:'',
+      })
+      }
+     
+  },
+  chagepayway:function(e){
+      this.setData({
+           showPayway:'',
+            showPswdInput:'none',
+            ActPotNum:'0',
+            userPayPswd:'',              
+      })
+  },
+  PswdInput:function(e){
+      var currNum=e.currentTarget.dataset.num;
+      var currPswd=this.data.userPayPswd+currNum;
+      var actpotNum=this.data.ActPotNum;
+      if(actpotNum==6){
+          //密码输入完成
+           console.log("输入的密码："+this.data.userPayPswd);
+      }
+      else{
+        actpotNum++;
+        this.setData({
+        ActPotNum:actpotNum,
+        userPayPswd:currPswd
+        });
+      }      
+    //   console.log("当前选择的数字"+currNum+"当前输入密码："+this.data.userPayPswd);
+  },
+  delActpot:function(e){
+      /*删除输入的密码 */
+      var that=this;
+      var actpotNum=this.data.ActPotNum;
+      var currPswd=this.data.userPayPswd;
+
+      if(actpotNum==0){
+           this.setData({
+           userPayPswd:''
+        });
+      }
+      else{
+          currPswd=Math.floor(currPswd/10);
+          actpotNum--;
+         this.setData({
+             ActPotNum:actpotNum,
+             userPayPswd:currPswd==0?'':currPswd
+          });
+      }
+        // console.log("当前密码："+this.data.userPayPswd+'activepotNum :'+this.data.ActPotNum);
+
   }
 })

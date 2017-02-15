@@ -42,4 +42,64 @@
             <text class="sellpricce">售价：500.00元</text>
         </view>
     </view>-->
+
+    <view class="cover {{showPayway}}"><!--遮罩层--></view>
+    <view class="recharge-payway {{showPayway}}">
+    <image src="{{closePay}}" mode="widthFix" class="closePay" bindtap="closePay"></image>
+        <view class="title">选择付款方式</view>
+        <view class="paywayItem " bindtap="chosePayway" data-payway='bal'>
+            <view class="fl"><image src="{{paywayBalImg}}" mode="widthFix" class="paywayImg"></image> </view>
+            <text class="wayName fl">余额</text>
+            <view class="wayBal fl">100.00</view>
+        </view>
+        <view class="paywayItem " bindtap="chosePayway" data-payway='wxin'>
+            <view class="fl"><image src="{{paywayWxImg}}" mode="widthFix" class="paywayImg"></image> </view>
+            <text class="wayName fl">微信支付</text>
+            <view class="wayBal fl">100.00</view>
+        </view>
+    </view>
+
+    <view class="cover {{showPswdInput}}"><!--遮罩层--></view>
+    <view class="recharge-pswdinput {{showPswdInput}}">
+        <view class="showRechargMsg">
+             <image src="{{closePay}}" mode="widthFix" class="closePay" bindtap="closePay"></image>
+             <image src="{{chosenPayway}}" mode="widthFix" class="titlePayway"></image>
+            <view class="title">输入支付密码</view>
+            <view class="phoneNum">
+            {{phone}}-手机充值</view>
+            <view class="rechargeAmt"><text>￥</text>{{showRechargeAmt}}</view>
+            <view class="showPswdPot">                
+                <view class="pot fl {{ActPotNum>0?'pot_active':''}}"></view>
+                <view class="pot fl {{ActPotNum>1?'pot_active':''}}"></view>
+                <view class="pot fl {{ActPotNum>2?'pot_active':''}}"></view>
+                <view class="pot fl {{ActPotNum>3?'pot_active':''}}"></view>
+                <view class="pot fl {{ActPotNum>4?'pot_active':''}}"></view>
+                <view class="pot fl {{ActPotNum>5?'pot_active':''}}"></view>
+            </view> 
+            <view class="changePayway fl">
+                当前付款方式：
+                <text class="chosenWay">{{paywaytext}}</text>
+            </view>   
+             <view class="changeWay fl" bindtap="chagepayway">更换</view>
+        </view><!--上面的显示部分-->
+
+        <view class="NumKeyboard ">
+            <view class="num first" data-num='1' bindtap="PswdInput">1</view>
+            <view class="num"  data-num='2' bindtap="PswdInput">2</view>
+            <view class="num" data-num='3' bindtap="PswdInput">3</view>
+            <view class="num first" data-num='4' bindtap="PswdInput">4</view>
+            <view class="num" data-num='5' bindtap="PswdInput">5</view>
+            <view class="num" data-num='6' bindtap="PswdInput">6</view>
+            <view class="num first" data-num='7' bindtap="PswdInput">7</view>
+            <view class="num" data-num='8' bindtap="PswdInput">8</view>
+            <view class="num" data-num='9' bindtap="PswdInput" >9</view>
+            <view class="num first lastline-white" ></view>
+            <view class="num lastline" data-num='0' bindtap="PswdInput">0</view>
+            <view class="num lastline-del" bindtap='delActpot'></view>
+        </view>
+
+    </view>
+
+
+
 </view>
