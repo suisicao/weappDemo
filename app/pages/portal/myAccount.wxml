@@ -1,6 +1,6 @@
 <view class="myAccount" bindtap="auth">
     <view class="topMess">
-        <image class="userPhoto fl " src="{{photoImg}}" mode="widthFix"></image>
+        <image class="userPhoto fl " src="{{avatarUrl}}" mode="widthFix"></image>
         <view class="UserMess">
             <text class="userName">
             <text class="uName">{{name}}</text>，你好

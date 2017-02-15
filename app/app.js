@@ -6,6 +6,15 @@ App({
   onLaunch: function() {
     wx.login({
       success: function(res) {
+      wx.getUserInfo({
+        success: function (res) {
+          console.log();
+          storage.setStorage({
+            key: 'avatarUrl',
+            data: res.userInfo.avatarUrl,
+        })
+        }
+      })
         if (res.code) {
           //code换取id
             request({ 
