@@ -10,6 +10,7 @@ Page({
     openId:'',
     phoneList:[],
     phoneAddr:'',
+    coreOrderIdSign:'',
     closePay:'../../../images/close.png',
     paywayBalImg:'../../../images/myacc-aimg1.png',
     paywayWxImg:'../../../images/weixin.png',
@@ -157,7 +158,11 @@ Page({
             }).then((rescharge) => {
                 console.log(rescharge)
                 if(rescharge.resCode=='0000'){
-
+                    this.setData({
+                        showPayway:'',
+                        showRechargeAmt:rechargeAmt/100,
+                        coreOrderIdSign:rescharge.data
+                    });
                 }else{
                     wx.showModal({
                         title: '',
@@ -167,15 +172,7 @@ Page({
                     return;
                 }
             })
-        }
-             
-        
-        )
-  /**显示设置 */
-          this.setData({
-            showPayway:'',
-            showRechargeAmt:rechargeAmt/100
-        });
+        })
   },
   closePay:function(e){
        this.setData({
@@ -218,18 +215,53 @@ Page({
       var currNum=e.currentTarget.dataset.num;
       var currPswd=this.data.userPayPswd+currNum;
       var actpotNum=this.data.ActPotNum;
-      if(actpotNum==6){
-          //密码输入完成
-           console.log("输入的密码："+this.data.userPayPswd);
-      }
-      else{
         actpotNum++;
         this.setData({
         ActPotNum:actpotNum,
-        userPayPswd:currPswd
-        });
-      }      
-    //   console.log("当前选择的数字"+currNum+"当前输入密码："+this.data.userPayPswd);
+        userPayPswd:currPswd     
+        })
+        if(actpotNum>=6){
+          //密码输入完成
+          var coreOrderIdSign=this.data.coreOrderIdSign;
+          var payPwd=this.data.userPayPswd;
+          var totalAmt=this.data.showRechargeAmt*100;
+          var openId=this.data.openId;
+          var bankId;
+          if(this.data.paywaytext=="微信支付"){
+            bankId='';
+          }
+          if(this.data.paywaytext=="账户余额"){
+            bankId='611700000000001';
+          }
+          console.log(coreOrderIdSign+" "+payPwd+" "+totalAmt+" "+openId+" "+bankId)
+            this.closePay();
+            request({ 
+            method: 'POST', 
+            header: {  
+            "content-type":               "application/x-www-form-urlencoded" 
+        }, 
+            url: api.getUrl('/actlist/gate/pay'),
+            data: { 
+                coreOrderIdSign:coreOrderIdSign,
+                bankId:bankId,
+                totalAmt:totalAmt,
+                payPwd:payPwd,
+                openId:openId
+            }
+            }).then((respay) => {
+                console.log(respay)
+                if(respay.resCode='0000'){
+
+                }else{
+                wx.showModal({
+                    title: '',
+                    content:respay.resMsg,
+                    showCancel:false
+                })
+                return;
+                }
+            }) 
+        }
   },
   delActpot:function(e){
       /*删除输入的密码 */
@@ -250,7 +282,5 @@ Page({
              userPayPswd:currPswd==0?'':currPswd
           });
       }
-        // console.log("当前密码："+this.data.userPayPswd+'activepotNum :'+this.data.ActPotNum);
-
   }
 })

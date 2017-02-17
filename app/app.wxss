@@ -171,3 +171,198 @@ background-position:5rem 0.5rem;
 
 
 }
+
+/*支付样式开始jhhhhhhhhhhhhhhhh*/
+.rechargeAmount{
+    width: 94%;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+.rechargeAmount .onepriceItem{
+    width: 28%;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 1rem;
+    height: 4.6rem;
+    border: 1px solid #ccc;
+    text-align: center;
+    color: #ccc;
+    background: #fff;
+}
+.rechargeAmount .choosenPrice{    
+    border: 1px solid #f93b45; 
+    color: #f93b45;  
+    
+}
+.rechargeAmount .onepriceItem .price{
+    display: block;
+   font-size:0.9rem;  
+   margin-top: 0.8rem;
+}
+.rechargeAmount .onepriceItem .sellpricce{
+    display: block;
+   font-size:0.7rem;  
+    margin-top: 0.5rem;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: black;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+}
+.recharge-payway{
+    position: absolute;
+    bottom: 0;
+    height:16rem;
+    width: 100%;
+    background: #fff;
+}
+.recharge-payway .closePay {
+    width: 1.2rem;
+    position: relative;
+    left: 1rem;
+    top:1rem;
+}
+.recharge-payway .title{
+    height: 1.8rem;
+    line-height: 0.6rem;
+    font-size: 1rem;
+    text-align: center;
+    color: #3a3939;
+    border-bottom: 1px solid #e8e8e8;
+}
+.recharge-payway .paywayItem{
+    width: 100%;
+    height: 2.4rem;
+    line-height: 2rem;
+    font-size:0.9rem;
+    color: #3a3939;
+    border-bottom: 1px solid #e8e8e8;
+}
+.recharge-payway .paywayItem .paywayImg{
+     width: 1.3rem;   
+    margin-left: 1rem;
+    margin-top: 0.6rem;
+}
+.recharge-payway .paywayItem .wayName{  
+    width: 40%;
+    height:2.4rem;
+    line-height:2.4rem;
+    margin-left: 0.5rem;
+}
+.recharge-payway .paywayItem .wayBal{
+    width: 30%;
+    height:2.4rem;
+    line-height:2.4rem;
+    text-align: right;
+    margin-right: 1rem;
+
+}
+/*支付密码输入*/
+.showRechargMsg{
+    position: absolute;
+    background: #f6f6f6;
+    width: 86%;
+    top:2.3rem;
+    left: 7%;
+    height: 11rem;
+    z-index: 999;
+}
+.showRechargMsg .title{
+    height: 1.1rem;
+    line-height: 0.1rem;
+    font-size:0.9rem;
+    text-align: center;
+    color: #f9b138;
+    border-bottom: 1px solid #e8e8e8;
+    margin-left:1em;
+}
+.showRechargMsg .closePay {
+    width: 1.2rem;
+    position: relative;
+    left: 1rem;
+    top:0.7rem;
+}
+.showRechargMsg .titlePayway{
+    width: 1.3rem;
+    position: relative;
+    left: 3.2rem;
+    top:0.8rem;
+}
+.showRechargMsg .phoneNum{
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    text-align: center;
+}
+.showRechargMsg .rechargeAmt{
+    font-size:1.3rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    text-align: center;
+}
+.showRechargMsg  .showPswdPot{
+  height: 2.3rem;
+  width:14rem;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.showRechargMsg  .showPswdPot .pot{  
+  height: 2.2rem;
+  width: 2.2rem;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  margin-right: -1px;
+}
+.showRechargMsg  .showPswdPot .pot_active{
+    background: url('../../../images/mima.png') center center no-repeat white;
+    background-size: 40%;
+}
+.showRechargMsg .changePayway{
+ text-align:right;
+width:68%;
+font-size:0.8rem;
+
+}
+.showRechargMsg .changeWay{
+ width:20%;
+ text-align: center;
+ font-size:0.8rem;
+ color: #39cb22;
+}
+.NumKeyboard{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 102%;
+    background: #feedd3;
+}
+.NumKeyboard .num{
+    float: left;
+    width: 33%;
+    border: 1px solid #fcd697;
+    border-right: 0 none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-top: -1px;
+    font-size: 1.3rem;
+    line-height: 2.6rem;
+    height:2.6rem;
+    text-align: center;
+    z-index: 998;
+}
+.NumKeyboard .first{
+   border-left: 0 none;
+}
+.NumKeyboard .lastline-white{
+  background: #fff;
+}
+.NumKeyboard .lastline-del{
+     background: url('../../../images/deletepass.png') no-repeat center center white;
+    background-size: 24% auto;
+}
+/*支付样式开始jhhhhhhhhhhhhhhhh*/

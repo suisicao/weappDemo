@@ -1,3 +1,4 @@
+const Promise = require('es6').Promise;
 module.exports = {
     getStorage:function(options) {
         return new Promise((resolve, reject) => {

@@ -1,3 +1,4 @@
+const Promise = require('es6').Promise;
 module.exports = (options) => {
     return new Promise((resolve, reject) => {
         options = Object.assign(options, { //把第一个参数和第二个参数合成一个对象，第一个参数为数据对象，第二个参数为回调对象
