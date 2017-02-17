@@ -20,7 +20,8 @@ Page({
     userPayPswd:'',
     showRechargeAmt:'',
     chosenPayway:'',
-    paywaytext:''
+    paywaytext:'',
+    ammountbalance:''
   },
   onReady: function() {
       storage.getStorage({
@@ -158,11 +159,28 @@ Page({
             }).then((rescharge) => {
                 console.log(rescharge)
                 if(rescharge.resCode=='0000'){
+                    request({ 
+                        method: 'POST', 
+                        header: {  
+                        "content-type":               "application/x-www-form-urlencoded" 
+                    }, 
+                        url: api.getUrl('/security/portal/indexIframe'),
+                        data: { 
+                            openId:openId
+                        }
+                    }).then((resammount) => {
+                        var balance=resammount.data.balance;
+                        if(!balance){
+                        balance="0.00";
+                        }
                     this.setData({
                         showPayway:'',
                         showRechargeAmt:rechargeAmt/100,
-                        coreOrderIdSign:rescharge.data
+                        coreOrderIdSign:rescharge.data,
+                        ammountbalance:balance
                     });
+                    }) 
+
                 }else{
                     wx.showModal({
                         title: '',
@@ -194,12 +212,19 @@ Page({
       })
       }
       else{
-           this.setData({
-          chosenPayway:this.data.paywayBalImg,
-          paywaytext:'账户余额',
-          showPayway:'none',
-          showPswdInput:'',
-      })
+          if(parseFloat(this.data.ammountbalance)<parseFloat(this.data.showRechargeAmt)){
+                wx.showModal({
+                    title: '账户可用余额不足',
+                    showCancel:false
+                })
+                return;
+          }
+        this.setData({
+            chosenPayway:this.data.paywayBalImg,
+            paywaytext:'账户余额',
+            showPayway:'none',
+            showPswdInput:'',
+        })
       }
      
   },
@@ -249,9 +274,8 @@ Page({
                 openId:openId
             }
             }).then((respay) => {
-                console.log(respay)
-                if(respay.resCode='0000'){
-
+                if(respay.resCode=='0000'){
+                    wx.redirectTo({ url: '../paySuc' });
                 }else{
                 wx.showModal({
                     title: '',

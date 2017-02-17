@@ -1,0 +1,30 @@
+/* pages/register/regSuc.wxss */
+.imgContain{
+    width:4rem;    
+    margin:0 auto;
+    margin-top: 4rem;
+}
+.regSucImg{
+    width: 4rem;   
+}
+.wordhints{
+    width:80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.wordhints>view{
+    margin-top: 0.6rem;
+    font-size: 1rem;
+}
+
+.wordhints .acchint{
+    font-size: 1rem;
+}
+ .wordhints .authhint {
+       font-size: 1rem;
+       color:#5f7aeb;
+ }
+ .wordhints .countDownhint{
+       font-size: 0.8rem;
+       color:#bfbfbf;
+ }

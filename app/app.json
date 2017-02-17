@@ -8,7 +8,8 @@
         "pages/account/login",
         "pages/portal/myAccount",
         "pages/portal/balance/item",  
-        "pages/actlist/phoneRecharge/one"
+        "pages/actlist/phoneRecharge/one",
+        "pages/actlist/paySuc"
     ],
 
     "window": {

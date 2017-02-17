@@ -16,6 +16,9 @@ page {
 .fl{
     float:left;
 }
+.fr{
+    float:right;
+}
 .btngrey{
     background: #d8d8d8 !important;
     color: white;
