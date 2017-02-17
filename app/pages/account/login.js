@@ -3,7 +3,7 @@ const api = require('../../lib/api.js');
 const request = require('../../lib/request.js');
 const storage = require('../../lib/storage.js');
 Page({
-data:{
+/*data:{
         phoneValue:'',
         password:'',
         disabled:false,
@@ -101,5 +101,5 @@ data:{
                 return;
             }
         })
-    }
+    }*/
 });

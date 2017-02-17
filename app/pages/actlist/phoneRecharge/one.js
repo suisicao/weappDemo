@@ -256,9 +256,8 @@ Page({
             bankId='';
           }
           if(this.data.paywaytext=="账户余额"){
-            bankId='611700000000001';
+            bankId='619999999999999';
           }
-          console.log(coreOrderIdSign+" "+payPwd+" "+totalAmt+" "+openId+" "+bankId)
             this.closePay();
             request({ 
             method: 'POST', 
@@ -274,6 +273,7 @@ Page({
                 openId:openId
             }
             }).then((respay) => {
+                console.log(respay)
                 if(respay.resCode=='0000'){
                     wx.redirectTo({ url: '../paySuc' });
                 }else{
