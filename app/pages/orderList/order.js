@@ -183,6 +183,7 @@ Page({
             this.setData({
               hasMore:false
             });
+            //试试看
         })    
       })
         
