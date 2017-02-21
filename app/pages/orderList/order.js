@@ -17,6 +17,7 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+    
   },
   onReady: function () {
       storage.getStorage({
@@ -32,7 +33,7 @@ Page({
           }, 
           url: api.getUrl('/myBill/myBillList'),
           data: { 
-              openId:'d3d510d2d73f11926149810c63b2959b',
+              openId:ress,
               pageNum: 1
           }
         }).then((resp) => {
