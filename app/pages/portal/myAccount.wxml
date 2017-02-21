@@ -10,7 +10,7 @@
             </text>
         </view>
         <view class="billandcard">
-            <text class="bills fl">账单</text>
+            <text class="bills fl" bindtap="order">账单</text>
             <view class="cutline fl"></view>
             <text class="cards fl">卡券包</text>
         </view>

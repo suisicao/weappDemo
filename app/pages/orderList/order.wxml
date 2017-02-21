@@ -1,0 +1,23 @@
+<scroll-view scroll-y="true" style="height: 100%;" bindscroll="scrollEventHandle" bindscrolltolower="scrolltolowerEventHandle">
+    <view class="orderList">
+        <view class="item" wx:for="{{orders}}">
+            <view class="text1 fl">
+                <text class="graytxt">{{item.orderDate}}</text>
+                <text class="graytxt">{{item.orderTime}}</text>
+            </view>
+            <image class="orderimg fl" src="../../images/myacc-aimg1.png"></image>
+            <view class="text2 fl">
+                <text class="">{{item.txnAtAll}}</text>
+                <text class="graytxt">{{item.goodsName}}</text>
+            </view>
+                <text class="text3 redtxt">{{item.stat}}</text>
+        </view>
+        <block wx:if="{{hasMore}}">
+            <view class="loading-tip">拼命加载中…</view>
+        </block>
+        <block wx:else>
+            <view class="loading-tip">没有更多内容了</view>
+        </block>
+    </view>
+</scroll-view>
+

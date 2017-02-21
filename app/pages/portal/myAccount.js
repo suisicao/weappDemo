@@ -76,6 +76,9 @@ Page({
         return;
     }
   },
+  order:function() {
+    wx.navigateTo({ url: '../orderList/order' });
+  },
   phoneRecharge:function() {
     if(this.data.auth!=0){
     wx.navigateTo({ url: '../actlist/phoneRecharge/one' });

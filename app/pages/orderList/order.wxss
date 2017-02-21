@@ -1,0 +1,48 @@
+/* orderList/order.wxss */
+.orderList .item{
+    overflow: hidden;
+    width: 100%;
+    height: 2.5rem;
+    background: white;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+}
+.orderList .item .graytxt{
+    color: #989898;
+}
+.orderList .item .redtxt{
+    color: #fd3a1a;
+}
+.orderList .item .text1{
+    margin-left: 1rem;
+}
+.orderList .item .text2{
+    max-width: 40%;
+    text-align: left;
+    margin-left: 1rem;
+}
+.orderList .item .text3{
+    float: right;
+    margin-right: 1rem;
+}
+.orderList .item .text1 text,
+.orderList .item .text2 text{
+    width: 100%;
+    display: block;
+    height: 1.2rem;
+    line-height: 1.2rem;
+}
+.orderList .item .orderimg{
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+.loading-tip {
+    width:100%;
+    font-size:0.8rem;
+    height:2rem;
+    line-height:2rem;
+    text-align:center;
+    color:#ccc;
+}

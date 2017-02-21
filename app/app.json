@@ -9,7 +9,8 @@
         "pages/portal/myAccount",
         "pages/portal/balance/item",  
         "pages/actlist/phoneRecharge/one",
-        "pages/actlist/paySuc"
+        "pages/actlist/paySuc",
+        "pages/orderList/order"
     ],
 
     "window": {
